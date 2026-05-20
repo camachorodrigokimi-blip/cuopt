@@ -492,7 +492,7 @@ def test_parser_and_batch_solver():
     batch_solution, solve_time = solver.BatchSolve(data_model_list, settings)
 
     # Call Solve on each individual data model object
-    individual_solutions = [] * nb_solves
+    individual_solutions = []
     for i in range(nb_solves):
         individual_solution = solver.Solve(
             mps_parser.ParseMps(file_path), settings
